@@ -2,7 +2,7 @@
 
 internal class Program
 {
-    [MyObsolete]
+    [MyObsolete(IsError = true, Message = "MYOBS")]
     private static string Method()
     {
         return "s";

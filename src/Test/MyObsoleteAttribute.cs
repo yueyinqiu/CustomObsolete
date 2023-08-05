@@ -10,6 +10,6 @@ namespace Test;
 [AttributeUsage(AttributeTargets.Method)]
 public sealed class MyObsoleteAttribute : Attribute, ICustomObsoleteAttribute
 {
-    public string Message => "My!";
-    public bool IsError => false;
+    public required string Message { get; init; }
+    public bool IsError { get; init; } = false;
 }
